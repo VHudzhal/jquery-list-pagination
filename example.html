@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>jQuery List Pagination Demo</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="../js/jquery.pagination.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".alphas").pagination({
+        panel: "top",
+        cssClass: "paginator",
+        innerClass: null,
+        style: "none",
+        withPerPageSelect: false,
+        perPage: 4,
+        descTemplate: "Page #{page} of #{pages}",
+        beforeClick: function(collection) {
+          alert("beforeClick");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <ul class="alphas">
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <li>E</li>
+    <li>F</li>
+    <li>G</li>
+    <li>H</li>
+    <li>I</li>
+    <li>J</li>
+    <li>K</li>
+    <li>L</li>
+    <li>M</li>
+  </ul>
+</body>
+</html>
